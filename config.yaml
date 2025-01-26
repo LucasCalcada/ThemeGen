@@ -8,4 +8,6 @@ generatedFiles:
     outputPath: ./kitty/kittyTheme.conf
   - template: css
     outputPath: theme.css
+  - template: rofi
+    outputPath: rofi-colors.rasi
 debug: false
