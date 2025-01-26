@@ -9,10 +9,17 @@ interface TemplateFile {
 }
 
 const CONFIG_PATH = "./config.yaml";
-const THEME_PATH = "./colorscheme.yaml";
-
 const CONFIG = parse(readFileSync(CONFIG_PATH, "utf8"));
+
+const THEME_PATH = "./colorscheme.yaml";
 const THEME = parse(readFileSync(THEME_PATH, "utf8"));
+
+// Create colorArray property from theme colors
+THEME.colorArray = []
+let colorKeys = Object.keys(THEME.colors);
+colorKeys.map(key => {
+  THEME.colorArray.push({ name: key, value: THEME.colors[key] });
+});
 
 const GENERATED_PATH = CONFIG.generatedPath ?? "./generated/";
 
