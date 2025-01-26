@@ -1,0 +1,10 @@
+#
+# Example Config
+#
+
+generatedPath: ./generatedTest
+generatedFiles:
+  - template: kitty
+    outputPath: ./kitty/kittyTheme.conf
+  - template: css
+    outputPath: theme.css

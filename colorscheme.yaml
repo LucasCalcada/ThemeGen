@@ -1,0 +1,45 @@
+manifest:
+  name: Custom Theme
+  author: Author Name
+  license: License
+  upstream: Repo URL
+  description: Theme Description
+
+colors:
+  foregroundDark: &foregroundDark "FFFFFF"
+  foreground: &foreground "FFFFFF"
+
+  backgroundDark: &backgroundDark "FFFFFF"
+  background: &background "FFFFFF"
+  backgroundBright: &backgroundBright "FFFFFF"
+
+  red: &red "FFFFFF"
+  redAlt: &redAlt "FFFFFF"
+
+  green: &green "FFFFFF"
+  greenAlt: &greenAlt "FFFFFF"
+
+  yellow: &yellow "FFFFFF"
+  yellowAlt: &yellowAlt "FFFFFF"
+
+  blue: &blue "FFFFFF"
+  blueAlt: &blueAlt "FFFFFF"
+
+  magenta: &magenta "FFFFFF"
+  magentaAlt: &magentaAlt "FFFFFF"
+
+  cyan: &cyan "FFFFFF"
+  cyanAlt: &cyanAlt "FFFFFF"
+
+  white: &white "FFFFFF"
+  whiteAlt: &whiteAlt "FFFFFF"
+
+properties:
+  cursorForeground: *background
+  cursorBackground: *foreground
+
+  selectionForeground: *background
+  selectionBackground: *foregroundDark
+
+  accent: *magenta
+  accentAlt: *magentaAlt
