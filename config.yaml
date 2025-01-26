@@ -10,4 +10,7 @@ generatedFiles:
     outputPath: theme.css
   - template: rofi
     outputPath: rofi-colors.rasi
+  - template: waybar
+    outputPath: waybar-colors.css
+
 debug: false
