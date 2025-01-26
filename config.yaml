@@ -8,3 +8,4 @@ generatedFiles:
     outputPath: ./kitty/kittyTheme.conf
   - template: css
     outputPath: theme.css
+debug: false

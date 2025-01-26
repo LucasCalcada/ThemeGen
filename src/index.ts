@@ -25,5 +25,10 @@ templates.map((template: TemplateFile) => {
   let outputPath = path.join(GENERATED_PATH, template.outputPath);
   let dirPath = path.dirname(outputPath);
   if (!existsSync(dirPath)) mkdirSync(dirPath, { recursive: true });
+
+  if (CONFIG.debug) {
+    console.log(compiledFile);
+    return
+  }
   writeFileSync(outputPath, compiledFile);
 });
