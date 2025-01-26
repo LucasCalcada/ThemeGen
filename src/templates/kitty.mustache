@@ -1,0 +1,78 @@
+# vim:ft=kitty
+
+## name: {{manifes.name}}
+## author: {{manifest.author}}
+## license: {{manifest.license}}
+## upstream: {{manifest.upstream}}
+## blurb: {{manifest.description}}
+
+# The basic colors
+foreground              {{colors.foreground}}
+background              {{colors.background}}
+selection_foreground    {{properties.selectionForeground}}
+selection_background    {{properties.selectionBackground}}
+
+# Cursor colors
+cursor                  {{properties.cursorBackground}}
+cursor_text_color       {{properties.cursorForeground}}
+
+# URL underline color when hovering with mouse
+url_color               {{properties.accent}}
+
+# Kitty window border colors
+active_border_color     {{properties.accent}}
+inactive_border_color   {{properties.accentAlt}}
+bell_border_color       {{properties.accentAlt}}
+
+# OS Window titlebar colors
+wayland_titlebar_color system
+macos_titlebar_color system
+
+# Tab bar colors
+active_tab_foreground   {{colors.background}}
+active_tab_background   {{properties.accent}}
+inactive_tab_foreground {{colors.background}}
+inactive_tab_background {{properties.accentAlt}}
+tab_bar_background      {{colors.backgroundBright}}
+
+# Colors for marks (marked text in the terminal)
+mark1_foreground {{colors.background}}
+mark1_background {{properties.accentAlt}}
+mark2_foreground {{colors.background}}
+mark2_background {{properties.accentAlt}}
+mark3_foreground {{colors.background}}
+mark3_background {{properties.accentAlt}}
+
+# The 16 terminal colors
+
+# text
+color0 {{colors.foreground}}
+color8 {{colors.foregroundDark}}
+
+# red
+color1 {{colors.red}}
+color9 {{colors.redAlt}}
+
+# green
+color2  {{colors.green}}
+color10 {{colors.greenAlt}}
+
+# yellow
+color3  {{colors.yellow}}
+color11 {{colors.yellowAlt}}
+
+# blue
+color4  {{colors.blue}}
+color12 {{colors.blueAlt}}
+
+# magenta
+color5  {{colors.magenta}}
+color13 {{colors.magentaAlt}}
+
+# cyan
+color6  {{colors.cyan}}
+color14 {{colors.cyanAlt}}
+
+# white
+color7  {{colors.white}}
+color15 {{colors.whiteAlt}}
