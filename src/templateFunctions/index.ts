@@ -6,5 +6,5 @@ function loadTemplateFunction(name: string, templateFunction: Function) {
   };
 }
 
-import hexToRgba from "./mustacheFuncs";
-loadTemplateFunction("hexToRgba", hexToRgba);
+import hexToHypr from "./hyprColors.ts";
+loadTemplateFunction("hexToHypr", hexToHypr);

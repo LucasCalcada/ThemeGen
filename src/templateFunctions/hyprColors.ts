@@ -1,5 +1,5 @@
 const hex: RegExp = new RegExp("#[0-9a-fA-F]{6}");
-export default function hexToRgba(text: string, render: Function) {
+export default function hexToHypr(text: string, render: Function) {
   text = render(text);
   text = text.trim();
 
