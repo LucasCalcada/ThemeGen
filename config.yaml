@@ -12,5 +12,7 @@ generatedFiles:
     outputPath: rofi-colors.rasi
   - template: waybar
     outputPath: waybar-colors.css
+  - template: hyprland
+    outputPath: hypr-colors.conf
 
 debug: false
