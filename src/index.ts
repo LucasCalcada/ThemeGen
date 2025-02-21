@@ -2,6 +2,7 @@ import { parse } from "yaml";
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
 import path from "path";
 import mustache from "mustache";
+import { templateFunctions } from "./templateFunctions/";
 
 interface TemplateFile {
   template: string;
@@ -21,6 +22,11 @@ colorKeys.map((key) => {
   THEME.colorArray.push({ name: key, value: THEME.colors[key] });
 });
 
+const TEMPLATE_CONFIG = {
+  ...THEME,
+  ...templateFunctions,
+};
+
 const GENERATED_PATH = CONFIG.generatedPath ?? "./generated/";
 
 const templates: TemplateFile[] = CONFIG.generatedFiles;
@@ -31,7 +37,7 @@ templates.map((template: TemplateFile) => {
     `./templates/${template.template}.mustache`,
   );
   let templateFile = readFileSync(templatePath, "utf-8");
-  let compiledFile = mustache.render(templateFile, THEME);
+  let compiledFile = mustache.render(templateFile, TEMPLATE_CONFIG);
   let outputPath = path.join(GENERATED_PATH, template.outputPath);
   let dirPath = path.dirname(outputPath);
   if (!existsSync(dirPath)) mkdirSync(dirPath, { recursive: true });
