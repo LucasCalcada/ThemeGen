@@ -17,9 +17,11 @@ const THEME = parse(readFileSync(THEME_PATH, "utf8"));
 
 // Create colorArray property from theme colors
 THEME.colorArray = [];
-let colorKeys = Object.keys(THEME.colors);
-colorKeys.map((key) => {
+Object.keys(THEME.colors).map((key) => {
   THEME.colorArray.push({ name: key, value: THEME.colors[key] });
+});
+Object.keys(THEME.properties).map((key) => {
+  THEME.colorArray.push({ name: key, value: THEME.properties[key] });
 });
 
 const TEMPLATE_CONFIG = {
